@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Add Question</h2>
+
+<mat-dialog-content class="mat-typography">
+
+<div class="container-fluid">
+  <form [formGroup]="form" (ngSubmit)="submitData()">
+  <div class="row">
+
+     <div class="col-10">
+        <label for="">Question</label>
+         <textarea name="message" formControlName="jd"  ></textarea>
+      </div>
+
+         <div class="col-6">
+        <label for="">Topic</label>
+        <select id="cars" name="cars">
+          <option *ngFor="let item of statusList" value="volvo">{{item}}</option>
+        </select>
+      </div>
+
+       <div class="col-6">
+        <label for="">Cancept</label>
+        <select id="cars" name="cars">
+          <option *ngFor="let item of statusList" value="volvo">{{item}}</option>
+        </select>
+      </div>
+
+  </div>
+     </form>
+</div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <div class="d-flex gap-3">
+    <button class="btn btn-outline-secondary">Cancel</button>
+    <button type="button" class="btn btn-success">Submit</button>
+  </div>
+  
+</mat-dialog-actions>

@@ -1,0 +1,76 @@
+<div class="container-fluid">
+
+  <h6 class="page-title" >Job Application Details     </h6>
+
+<div class="row">
+   
+         <div class="col-6">
+        <label for="">Company  <span class="create-path ms-3" (click)="openDialog4()"  matTooltip="Create new Company" >Create</span> </label>
+        <input type="email" formControlName="companyId">
+      </div>
+
+      <div class="col-6">
+        <label for="">position</label>
+        <input type="email" formControlName="position">
+      </div>
+
+      <div class="col-6">
+        <label for="">salary</label>
+        <input type="email" formControlName="salary">
+      </div>
+
+      <div class="col-6">
+        <label for="">Status</label>
+        <select id="cars" name="cars">
+          <option *ngFor="let item of statusList" value="volvo">{{item}}</option>
+        </select>
+      </div>
+
+         <div class="col-10">
+        <label for="">JD</label>
+         <textarea name="message" formControlName="jd"  ></textarea>
+      </div>
+
+        <div class="col-10">
+        <label for="">Note</label>
+     <textarea name="message" formControlName="notes"  ></textarea>
+      </div>
+   
+  <div class="d-flex justify-content-end gap-3 my-2">
+    <button class="btn btn-outline-secondary">Cancel</button>
+    <button type="button" class="btn btn-success">Submit</button>
+  </div>
+
+</div>
+
+<div class="my-3 page-card">
+   <h6 class="page-title" >Recuiters Details  <span class="create-path ms-3" (click)="openDialog()"  matTooltip="Create new Company" >Create</span>  </h6>
+   <div>
+    <button type="button" class="btn btn-outline-primary">Raghu Pavan</button>
+   </div>
+</div>
+
+<div class="my-4 page-card">
+   <h6 class="page-title">Employees Details  <span class="create-path ms-3" (click)="openDialog2()"  matTooltip="Create new Employee" >Create</span>  </h6>
+   <div>
+    <button type="button" class="btn btn-outline-primary">Keshav Ashiya</button>
+   </div>
+</div>
+
+<div class="my-4 page-card">
+   <h6 class="page-title" >Questions <span class="create-path ms-3" (click)="openDialog3()"  matTooltip="Create new Employee" >Create</span>  </h6>
+   <div>
+
+ <app-questions [Id]="jobId" ></app-questions>
+   </div>
+</div>
+
+<div class="my-4 page-card">
+     <h6 class="page-title" >Conversation   </h6>
+
+  <div>
+    <app-conversation [Id]="jobId"></app-conversation>
+  </div>
+</div>
+
+</div>

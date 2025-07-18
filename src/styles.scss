@@ -1,4 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+label{
+    display: block;
+}
+
+input , select {
+      width: 90%;
+    height: 35px;
+}
+
+textarea{
+    width: 100%;
+}
+
+.create-path{
+    color:green;
+    text-decoration: underline;
+}
+
+.page-title{
+  
+    background-color: #B1AB86;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.page-card{
+    border: 3px solid #03A6A1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.active{
+    color:white;
+}
+
+

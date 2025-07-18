@@ -1,1 +1,43 @@
-<p>addcompany works!</p>
+<h2 mat-dialog-title>Add Company</h2>
+
+<mat-dialog-content class="mat-typography">
+
+<div class="container-fluid">
+  <form [formGroup]="form" >
+  <div class="row">
+
+      <div class="col-6">
+        <label for="">Name</label>
+        <input type="text" formControlName="name">
+      </div>
+
+      <div class="col-6">
+        <label for="">Website</label>
+        <input type="text" formControlName="website" 
+          >
+      </div>
+
+      <div class="col-6">
+        <label for="">Location</label>
+        <input type="text" formControlName="location" 
+          >
+      </div>
+
+      <div class="col-6">
+        <label for="">Industry</label>
+        <input type="text" formControlName="industry" 
+          >
+      </div>
+
+  </div>
+     </form>
+</div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <div class="d-flex gap-3">
+    <button class="btn btn-outline-secondary">Cancel</button>
+    <button (click)="submitData()" type="button" class="btn btn-success">Submit</button>
+  </div>
+  
+</mat-dialog-actions>

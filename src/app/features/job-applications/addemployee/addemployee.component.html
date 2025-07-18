@@ -1,1 +1,54 @@
-<p>addemployee works!</p>
+<h2 mat-dialog-title>Add Employee</h2>
+
+<mat-dialog-content class="mat-typography">
+
+<div class="container-fluid">
+  <form [formGroup]="form" (ngSubmit)="submitData()">
+  <div class="row">
+
+    
+      <div class="col-6">
+        <label for="">Name</label>
+        <input type="email" formControlName="name">
+      </div>
+
+      <div class="col-6">
+        <label for="">email</label>
+        <input type="email" formControlName="email" 
+          placeholder="name@example.com">
+      </div>
+
+      <div class="col-6">
+        <label for="">phone</label>
+        <input type="email" formControlName="phone" 
+          placeholder="name@example.com">
+      </div>
+
+      <div class="col-6">
+        <label for="">linkedIn</label>
+        <input type="email" formControlName="linkedIn" 
+          placeholder="name@example.com">
+      </div>
+
+       <div class="col-10">
+        <label for="">Skills</label>
+     <textarea name="message" formControlName="skills"  ></textarea>
+      </div>
+
+       <div class="col-10">
+        <label for="">Note</label>
+     <textarea name="message" formControlName="notes"  ></textarea>
+      </div>
+
+  </div>
+     </form>
+</div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <div class="d-flex gap-3">
+    <button class="btn btn-outline-secondary">Cancel</button>
+    <button type="button" class="btn btn-success">Submit</button>
+  </div>
+  
+</mat-dialog-actions>

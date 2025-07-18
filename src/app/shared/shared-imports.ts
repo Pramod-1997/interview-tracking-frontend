@@ -16,6 +16,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatChipsModule} from '@angular/material/chips';
 
 export const sharedImports = [
   CommonModule,
@@ -35,4 +37,6 @@ export const sharedImports = [
   MatSelectModule,
   MatTableModule,
   MatPaginatorModule,
+  MatTooltipModule,
+  MatChipsModule
 ];

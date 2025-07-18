@@ -1,9 +1,50 @@
 <div class="container-fluid">
+
+  <h6>Add Job Application</h6>
+
+
+    <form [formGroup]="form" >
 <div class="row">
-    <div class="col-6">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
+   
+         <div class="col-6">
+        <label for="">Company  <span class="create-path ms-3" (click)="openDialog()"  matTooltip="Create new Company" >Create</span> </label>
+        <select id="cars" name="cars" formControlName="companyId">
+          <option *ngFor="let item of companyList" [value]="item" >{{item}}</option>
+        </select>
+      </div>
+
+      <div class="col-6">
+        <label for="">position</label>
+        <input type="email" formControlName="position">
+      </div>
+
+      <div class="col-6">
+        <label for="">salary</label>
+        <input type="email" formControlName="salary">
+      </div>
+
+      <div class="col-6">
+        <label for="">Status</label>
+        <select id="cars" name="cars" formControlName="status" >
+          <option *ngFor="let item of jobStatus" [value]="item">{{item}}</option>
+        </select>
+      </div>
+
+        <div class="col-10">
+        <label for="">JD</label>
+         <textarea name="message" formControlName="jd"  ></textarea>
+      </div>
+
+        <div class="col-10">
+        <label for="">Note</label>
+     <textarea name="message" formControlName="notes"  ></textarea>
+      </div>
+   
+  <div class="d-flex justify-content-end gap-3 my-2">
+    <button class="btn btn-outline-secondary">Cancel</button>
+    <button (click)="submitData()" type="button" class="btn btn-success">Submit</button>
+  </div>
 
 </div>
+</form>
 </div>
