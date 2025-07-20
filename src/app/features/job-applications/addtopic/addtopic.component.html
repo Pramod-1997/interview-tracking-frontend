@@ -1,0 +1,66 @@
+
+
+<mat-dialog-content class="mat-typography">
+
+<div class="container-fluid">
+  <form [formGroup]="form" >
+
+    <div class="" >Add New Subject</div>
+  <div class="row">
+      <div class="col-10">
+        <label for="">Subject</label>
+        <input type="text" formControlName="subject">
+      </div>
+
+       <div class="col-2 mt-4">
+         <button (click)="addSubject()" type="button" class="btn btn-sm btn-success">Submit</button>
+      </div>
+
+
+
+  </div>
+   <div class="mt-4" >Add New Cancept</div>
+   <div class="row">
+      <div class="col-10">
+        <label for="">Cancept</label>
+        <input type="text" formControlName="topic">
+      </div>
+
+       <div class="col-2 mt-4">
+         <button (click)="addTopic()" type="button" class="btn btn-sm btn-success">Submit</button>
+      </div>
+
+  </div>
+
+<div class="mt-4" >Assign Topic to Subject</div>
+  <div class="row">
+         <div class="col-5">
+        <label for="">Subject</label>
+        <select id="cars" name="cars" formControlName="subjectId">
+          <option *ngFor="let item of subjectList" [value]="item._id">{{item.name}}</option>
+        </select>
+      </div>
+
+       <div class="col-5">
+        <label for="">Cancept</label>
+        <select id="cars" name="cars" formControlName="topicId">
+          <option *ngFor="let item of topicList" [value]="item._id">{{item.name}}</option>
+        </select>
+      </div>
+
+       <div class="col-2 mt-4">
+         <button (click)="mapSubjectTopic()" type="button" class="btn btn-sm btn-success">Submit</button>
+      </div>
+
+  </div>
+     </form>
+</div>
+</mat-dialog-content>
+
+<!-- <mat-dialog-actions align="end">
+  <div class="d-flex gap-3">
+    <button (click)="closeDialog()" class="btn btn-outline-secondary">Cancel</button>
+    <button (click)="submitData()" type="button" class="btn btn-success">Submit</button>
+  </div>
+  
+</mat-dialog-actions> -->

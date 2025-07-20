@@ -1,16 +1,18 @@
-<div class="container-fluid">
+<h2 mat-dialog-title>Add Job</h2>
 
-  <h6>Add Job Application</h6>
-
+<mat-dialog-content class="mat-typography">
+  
 
     <form [formGroup]="form" >
 <div class="row">
    
          <div class="col-6">
         <label for="">Company  <span class="create-path ms-3" (click)="openDialog()"  matTooltip="Create new Company" >Create</span> </label>
+
         <select id="cars" name="cars" formControlName="companyId">
-          <option *ngFor="let item of companyList" [value]="item" >{{item}}</option>
+          <option *ngFor="let item of companyList" [value]="item.id" >{{item.name}}</option>
         </select>
+
       </div>
 
       <div class="col-6">
@@ -47,4 +49,4 @@
 
 </div>
 </form>
-</div>
+</mat-dialog-content>

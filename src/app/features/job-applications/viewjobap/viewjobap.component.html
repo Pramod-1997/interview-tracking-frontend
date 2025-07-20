@@ -2,21 +2,22 @@
 
   <h6 class="page-title" >Job Application Details     </h6>
 
-<div class="row">
-   
+
+     <form [formGroup]="form" >
+      <div class="row">
          <div class="col-6">
-        <label for="">Company  <span class="create-path ms-3" (click)="openDialog4()"  matTooltip="Create new Company" >Create</span> </label>
-        <input type="email" formControlName="companyId">
+        <label for="">Company  </label>
+        <input type="text" formControlName="companyId">
       </div>
 
       <div class="col-6">
         <label for="">position</label>
-        <input type="email" formControlName="position">
+        <input type="text" formControlName="position">
       </div>
 
       <div class="col-6">
         <label for="">salary</label>
-        <input type="email" formControlName="salary">
+        <input type="text" formControlName="salary">
       </div>
 
       <div class="col-6">
@@ -41,7 +42,9 @@
     <button type="button" class="btn btn-success">Submit</button>
   </div>
 
-</div>
+  </div>
+</form>
+
 
 <div class="my-3 page-card">
    <h6 class="page-title" >Recuiters Details  <span class="create-path ms-3" (click)="openDialog()"  matTooltip="Create new Company" >Create</span>  </h6>

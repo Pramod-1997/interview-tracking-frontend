@@ -12,10 +12,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class NavbarComponent {
 
   menuList = [
-    {name:'Company',url:''},
-     {name:'Job-apply',url:'view-jobapp'},
+    {name:'job ap', url:'jobap'},
+    {name:'Company',url:'company'},
+      {name:'recuiter',url:'recuiter'},
        {name:'Question',url:'question'},
-        {name:'Conversation',url:'conversation'},
+    //    {name:'Conversation',url:'conversation'},
   ]
 
 }

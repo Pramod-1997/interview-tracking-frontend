@@ -8,20 +8,20 @@
 
      <div class="col-10">
         <label for="">Question</label>
-         <textarea name="message" formControlName="jd"  ></textarea>
+         <textarea name="message" formControlName="questionText"  ></textarea>
       </div>
 
          <div class="col-6">
         <label for="">Topic</label>
-        <select id="cars" name="cars">
-          <option *ngFor="let item of statusList" value="volvo">{{item}}</option>
+        <select id="cars" name="cars" formControlName="subjectId" >
+          <option *ngFor="let item of subjectList" [value]="item._id">{{item.name}}</option>
         </select>
       </div>
 
        <div class="col-6">
-        <label for="">Cancept</label>
-        <select id="cars" name="cars">
-          <option *ngFor="let item of statusList" value="volvo">{{item}}</option>
+        <label for="">Cancept</label >
+        <select id="cars" name="cars" formControlName="topicId">
+          <option *ngFor="let item of topicList" [value]="item._id">{{item.name}}</option>
         </select>
       </div>
 
@@ -32,8 +32,8 @@
 
 <mat-dialog-actions align="end">
   <div class="d-flex gap-3">
-    <button class="btn btn-outline-secondary">Cancel</button>
-    <button type="button" class="btn btn-success">Submit</button>
+    <button (click)="closeDialog()" class="btn btn-outline-secondary">Cancel</button>
+    <button (click)="submitData()" type="button" class="btn btn-success">Submit</button>
   </div>
   
 </mat-dialog-actions>

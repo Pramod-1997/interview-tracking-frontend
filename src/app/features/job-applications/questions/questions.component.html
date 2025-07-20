@@ -1,18 +1,30 @@
+  <h6 class="page-title" >Question Details   </h6>
+
+<div class="d-flex flex-row mb-3">
+  <!-- <div class="p-2">  <h6 class="page-title" >Company Details   </h6> </div> -->
+  <div class="p-2 ms-auto" (click)="openDialog()">create question</div>
+    <div class="p-2" (click)="openDialog3()">create Topic</div>
+</div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-     <ng-container matColumnDef="SlNO">
+     <!-- <ng-container matColumnDef="SlNO">
     <th mat-header-cell *matHeaderCellDef> S.No </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-  </ng-container>
+    <td mat-cell *matCellDef="let element"> </td>
+  </ng-container> -->
 
    <ng-container matColumnDef="question">
     <th mat-header-cell *matHeaderCellDef> question </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.questionText}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Subjcet">
+    <th mat-header-cell *matHeaderCellDef> Subjcet </th>
+    <td mat-cell *matCellDef="let element"> {{element.subjectId.name}} </td>
   </ng-container>
 
    <ng-container matColumnDef="Topic">
-    <th mat-header-cell *matHeaderCellDef> Topic </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    <th mat-header-cell *matHeaderCellDef> Cancept </th>
+    <td mat-cell *matCellDef="let element"> {{element.topicId.name}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

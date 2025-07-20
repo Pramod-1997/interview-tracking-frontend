@@ -38,5 +38,6 @@ export const sharedImports = [
   MatTableModule,
   MatPaginatorModule,
   MatTooltipModule,
-  MatChipsModule
+  MatChipsModule,
+  
 ];

@@ -36,7 +36,7 @@
 
 <mat-dialog-actions align="end">
   <div class="d-flex gap-3">
-    <button class="btn btn-outline-secondary">Cancel</button>
+    <button (click)="closeDialog()" class="btn btn-outline-secondary">Cancel</button>
     <button (click)="submitData()" type="button" class="btn btn-success">Submit</button>
   </div>
   
